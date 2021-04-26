@@ -1,11 +1,9 @@
-from flask import Flask, request, jsonify
-app = Flask(__name__)
+from flask import request, jsonify
+from app import app
 
 @app.route('/draftool/', methods=['GET'])
 def respond():
     name = request.args.get("name", None)
-
-    print(f"got name {name}")
 
     response = {}
 
